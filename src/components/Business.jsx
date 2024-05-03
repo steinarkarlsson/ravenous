@@ -22,8 +22,8 @@ function Business() {
                     <p>{business.state} {business.zip}</p>
                 </div>
                 <div className="basis-1/3 text-right">
-                    <p className="uppercase text-xl text-amber-300 font-bold">{business.category}</p>
-                    <p className="text-amber-300 font-bold">{business.rating} stars</p>
+                    <p className="uppercase text-xl text-yellow-600 font-bold">{business.category}</p>
+                    <p className="text-yellow-600 font-bold">{business.rating} stars</p>
                     <p className="">{business.reviewCount} reviews</p>
                 </div>
             </div>

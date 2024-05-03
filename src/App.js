@@ -4,7 +4,7 @@ import BusinessList from "./components/BusinessList";
 
 function App() {
   return (
-    <div className="App flex justify-center">
+    <div className="flex justify-center w-full">
       <div>
         <SearchBar />
         <BusinessList />
