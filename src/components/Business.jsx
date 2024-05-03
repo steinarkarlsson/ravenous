@@ -12,7 +12,7 @@ const business = {
 
 function Business() {
     return (
-        <div className="flex flex-col w-1/4">
+        <div className="flex flex-col m-10 border border-red-600">
             <img src={business.image} alt={business.name}/>
             <h4 className="text-left text-xl font-bold">{business.name}</h4>
             <div className="flex flex-row">
