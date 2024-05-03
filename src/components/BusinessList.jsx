@@ -1,17 +1,11 @@
 import Business from "./Business";
 
-function BusinessList() {
+function BusinessList({businesses}) {
   return (
     <div className="grid grid-cols-3 content-center max-w-7xl justify-center">
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
+        {businesses.map((business) => (
+            <Business business={business}/>
+        ))}
     </div>
   );
 }

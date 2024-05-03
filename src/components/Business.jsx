@@ -1,16 +1,4 @@
-const business = {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDduFw54H5IFfFDvng4Wws96yenR9yx_DZ0PFSul8mKg&s',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Bordertown',
-    state: 'KY',
-    zip: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90,
-}
-
-function Business() {
+function Business({business}) {
     return (
         <div className="flex flex-col m-10">
             <img src={business.image} alt={business.name}/>
