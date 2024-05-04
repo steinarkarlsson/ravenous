@@ -2,7 +2,7 @@ import './App.css';
 import SearchBar from "./components/SearchBar"
 import BusinessList from "./components/BusinessList";
 import retrieveBusinesses from "./utils/dataProvider";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 function App() {
     const [searchTerm, setSearchTerm] = useState('indian');
@@ -10,9 +10,11 @@ function App() {
     const [sortBy, setSortBy] = useState('best_match');
     const [businesses, setBusinesses] = useState([{}]);
 
-    retrieveBusinesses(searchTerm, selectedLocation, sortBy).then((response) => {
-        setBusinesses(response.businesses);
-    });
+    useEffect(() => {
+        retrieveBusinesses(searchTerm, selectedLocation, sortBy).then((response) => {
+            setBusinesses(response.businesses);
+        });
+    }, []);
 
     const handleSearchTermChange = (event) => {
         setSearchTerm(event.target.value);
