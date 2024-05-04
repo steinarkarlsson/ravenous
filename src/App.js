@@ -14,6 +14,7 @@ function App() {
         retrieveBusinesses(searchTerm, selectedLocation, sortBy).then((response) => {
             setBusinesses(response.businesses);
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleSearchTermChange = (event) => {
